@@ -87,9 +87,4 @@ gallery.insertAdjacentHTML("beforeend", createMarkup(images));
 import simpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
-var lightbox = new simpleLightbox('.gallery a', {
-  // sourceAttr: "data-img",
-  // overlayOpacity: 0.8,
-  // captionsData: "alt",
-
-})
+let lightbox = new simpleLightbox('.gallery a', {})
