@@ -87,4 +87,7 @@ gallery.insertAdjacentHTML("beforeend", createMarkup(images));
 import simpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
-let lightbox = new simpleLightbox('.gallery a', {})
+let lightbox = new simpleLightbox('.gallery a', {
+  captionsData: "alt",
+  captionDelay: 250,
+})
