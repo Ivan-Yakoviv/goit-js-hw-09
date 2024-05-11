@@ -1,0 +1,2 @@
+import"./assets/modulepreload-polyfill-3cfb730f.js";const a=document.querySelector(".feedback-form");a.addEventListener("input",s);a.addEventListener("submit",handleSubmit);const n={email:"",message:""};function s(e){const t=e.target.name;n[t]=e.target.value,localStorage.setItem("inputData",JSON.stringify(n))}m();function m(){const e=JSON.parse(localStorage.getItem("inputData"));if(!e)return;const{email:t,message:o}=a.elements;t.value=e.email,o.value=e.message}
+//# sourceMappingURL=commonHelpers2.js.map
