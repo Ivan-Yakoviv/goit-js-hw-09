@@ -1,6 +1,6 @@
 const form = document.querySelector(".feedback-form");
 
-form.autocomplete = "on";
+form.label.textarea.setAttribute("placeholder", "Amazing nature");
 form.addEventListener("input", handleInput);
 form.addEventListener("submit", handleSubmit);
 
@@ -32,9 +32,16 @@ function populateText() {
 function handleSubmit(event) {
     event.preventDefault();
     const { email, message } = form.elements;
+       const emailValue = email.value;
+    const messageValue = message.value;
     if (email.value === "" || message.value === "") {
        return alert("Please fill in all the fields!");
     }
-    console.log(`Email: ${email.value}, Message: ${message.value}`);
-  form.reset();
+    console.log({
+        email: emailValue,
+        message: messageValue
+    });
+    //   form.reset();
+      event.target.reset();
+    localStorage.removeItem("feedback-form-state");
 }

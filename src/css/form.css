@@ -43,6 +43,10 @@ textarea {
   align-items: center;
 }
 
+textarea:active {
+  place-content: lkj;
+}
+
 button {
   cursor: pointer;
   display: flex;
