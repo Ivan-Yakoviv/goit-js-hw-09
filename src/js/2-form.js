@@ -1,6 +1,7 @@
 const form = document.querySelector(".feedback-form");
+const textArea = document.querySelector("input");
 
-form.label.textarea.setAttribute("placeholder", "Amazing nature");
+textArea.setAttribute("placeholder", "Type area");
 form.addEventListener("input", handleInput);
 form.addEventListener("submit", handleSubmit);
 
@@ -41,7 +42,8 @@ function handleSubmit(event) {
         email: emailValue,
         message: messageValue
     });
-    //   form.reset();
-      event.target.reset();
+
+    //   event.target.reset();
+      form.reset();
     localStorage.removeItem("feedback-form-state");
 }
